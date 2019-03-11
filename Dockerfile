@@ -11,5 +11,5 @@ RUN usermod borg -aG ssh-user
 EXPOSE 65000
 USER borg
 RUN mkdir ~/.ssh/
-RUN ln -s /home/borg/.ssh/ /backups/ssh/
+RUN ln -s /home/borg/.ssh/ /backups/ssh
 CMD ["sshd -D"]
