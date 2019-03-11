@@ -13,4 +13,5 @@ USER borg
 RUN mkdir ~/.ssh/
 RUN ln -s /home/borg/.ssh/ /backups/ssh
 USER root
+RUN mkdir /run/sshd
 CMD ["/usr/sbin/sshd", "-D"]
