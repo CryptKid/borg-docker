@@ -12,4 +12,4 @@ EXPOSE 65000
 USER borg
 RUN mkdir ~/.ssh/
 RUN ln -s /home/borg/.ssh/ /backups/ssh
-CMD ["sshd -D"]
+CMD ["/usr/sbin/sshd", "-D"]
